@@ -1,0 +1,29 @@
+## install global sass
+- npm i -g sass
+
+## install bootstrap css
+yarn add bootstrap@5.3.3
+
+# create custom.scss file and add
+
+``
+// Override Bootstrap's variables
+$primary: rgb(53, 142, 99);
+$secondary: blue;
+$warning : rgb(255, 255, 0);
+$success: rgb(32, 134, 55);
+$info : #17a2b8;
+$link-color: $primary;
+$danger:red;
+
+// Import Bootstrap's default variables
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+// Import Bootstrap to generate the final CSS
+@import "node_modules/bootstrap/scss/bootstrap";
+
+``
+
+ ## run
+ - sass custom.scss custom.css
